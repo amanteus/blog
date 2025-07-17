@@ -1,0 +1,70 @@
+/* ========================================================== */
+/* --- ESTILOS PARA O BLOG PRIMORDIAL --- */
+/* ========================================================== */
+
+/* Declaração das Fontes Locais */
+@font-face {
+  font-family: 'Loft';
+  src: url('assets/fonts/Loft-Regular-iF660a82ad1b77b.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Houstiq';
+  src: url('assets/fonts/Houstiq.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Variáveis de Cor e Fonte da Marca */
+:root {
+    --bg-color: #0f0f0f;
+    --text-color: #f0f0f0;
+    --accent-color: #c4aa83;
+    --brand-green: #021710;
+    --font-primary: 'Roboto', sans-serif;
+    --font-headline: 'Loft', sans-serif;
+    --font-script: 'Houstiq', cursive;
+}
+
+/* Estilos Gerais do Blog */
+.blog-body { background-color: var(--bg-color); color: var(--text-color); font-family: var(--font-primary); }
+.blog-header { background-color: rgba(15, 15, 15, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 1000; }
+.blog-nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; max-width: 1100px; margin: 0 auto; width: 90%; }
+.blog-logo img { max-height: 35px; opacity: 0.9; }
+.blog-nav { display: flex; align-items: center; gap: 30px; }
+.blog-nav a { color: #ccc; text-decoration: none; font-weight: bold; transition: color 0.3s; font-size: 0.9rem; }
+.blog-nav a:hover { color: var(--accent-color); }
+#reading-progress-bar { height: 3px; background-color: var(--accent-color); width: 0%; position: fixed; top: 0; left: 0; z-index: 1001; transition: width 0.1s linear; }
+
+/* Página Principal do Blog */
+.blog-page .container { max-width: 800px; }
+.blog-page-header { text-align: center; padding: 60px 0 40px 0; }
+.blog-page-header .section-title { font-family: var(--font-headline); color: var(--text-color); }
+.blog-page-header .section-subtitle { font-family: var(--font-primary); color: #aaa; }
+.post-list-item { background-color: #1a1a1a; padding: 30px; border: 1px solid #2a2a2a; border-radius: 8px; margin-bottom: 30px; transition: transform 0.3s, box-shadow 0.3s; }
+.post-list-item:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+.post-list-title a { color: var(--text-color); text-decoration: none; transition: color 0.3s; font-family: var(--font-headline); font-size: 1.8rem; }
+.post-list-title a:hover { color: var(--accent-color); }
+.post-list-meta { color: #888; font-size: 0.9rem; margin: 10px 0; }
+.post-list-excerpt { color: #aaa; }
+.read-more { display: inline-block; margin-top: 20px; color: var(--accent-color); text-decoration: none; font-weight: bold; }
+
+/* Página de Artigo Individual */
+.post-container { max-width: 800px; margin: 80px auto; padding: 0 20px; }
+.post-header { text-align: center; margin-bottom: 40px; }
+.post-title { font-family: var(--font-headline); font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--text-color); }
+.post-meta { color: #888; font-size: 1rem; margin-top: 15px; }
+.reading-time { font-style: italic; }
+.post-content { color: #ccc; line-height: 1.9; font-size: 1.1rem; }
+.post-content h2, .post-content h3 { font-family: var(--font-headline); color: var(--text-color); margin: 40px 0 20px 0; border-bottom: 2px solid #333; padding-bottom: 10px; }
+.post-content a { color: var(--accent-color); text-decoration: none; border-bottom: 1px dotted var(--accent-color); }
+.post-content blockquote { border-left: 3px solid var(--accent-color); padding-left: 20px; margin: 30px 0; font-style: italic; color: #aaa; font-size: 1.2rem; }
+.post-content ul li { margin-bottom: 10px; }
+
+.related-posts { margin-top: 80px; padding-top: 40px; border-top: 1px solid #333; }
+.related-posts-title { font-family: var(--font-headline); text-align: center; margin-bottom: 30px; }
+.related-posts ul { list-style: none; padding: 0; }
+.related-posts li a { display: flex; justify-content: space-between; align-items: center; padding: 15px; background-color: #1a1a1a; border-radius: 5px; margin-bottom: 10px; text-decoration: none; color: var(--text-color); font-weight: bold; transition: background-color 0.3s; }
+.related-posts li a:hover { background-color: #2a2a2a; }
+.related-posts li span { font-size: 0.9rem; color: #888; }

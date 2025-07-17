@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="post-container">
+    <article class="post">
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+            Por {{ site.author }} em <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d de %B de %Y" }}</time>
+            <span class="reading-time"> • Leitura de ~{% assign words = content | number_of_words %}{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }} mins{% endif %}</span>
+        </p>
+      </header>
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </article>
+
+    <aside class="related-posts">
+        <h3 class="related-posts-title">Doutrina Relacionada</h3>
+        <ul>
+            {% for post in site.related_posts limit:3 %}
+                <li>
+                    <a href="{{ post.url | relative_url }}">
+                        {{ post.title }}
+                        <span>{{ post.date | date: "%d/%m/%Y" }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </aside>
+</div>

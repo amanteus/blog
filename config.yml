@@ -1,0 +1,13 @@
+title: Amanteus Primordial - O Blog
+author: Erik Amanteus
+description: "A doutrina por trás da nova filosofia masculina do século. Um manual para forjar o homem que você nasceu para ser."
+url: "https://blog.amanteus.com.br"
+
+markdown: kramdown
+permalink: /artigos/:title/
+
+# Plugins essenciais para SEO e funcionalidade no GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
